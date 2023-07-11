@@ -1,2 +1,2 @@
 <?php
-echo "edit page";
+echo "edit page {{$id}}";
