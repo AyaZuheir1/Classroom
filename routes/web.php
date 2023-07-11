@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EditController;
+use App\Http\Controllers\classroomsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/classrooms', [classroomsController::class, 'index'])->name('classrooms.index');
-// Route::get('/classrooms/create', [classroomsController::class, 'create'])->name('classrooms.create');
-// Route::get('/classrooms/{classroom}/{edit?}', [classroomsController::class, 'show']);
+Route::get('/classrooms', [classroomsController::class, 'index'])->name('classrooms.index');
+Route::get('/classrooms/create', [classroomsController::class, 'create'])->name('classrooms.create');
 Route::get('/edit/{id?}', [EditController::class, 'index'])->name('edit.index');

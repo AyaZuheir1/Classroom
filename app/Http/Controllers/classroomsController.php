@@ -13,7 +13,7 @@ class classroomsController extends Controller
             'index',
             [
                 'name' => 'aya',
-                'title' => 'Web Developer',
+                
             ]
         );
     }
