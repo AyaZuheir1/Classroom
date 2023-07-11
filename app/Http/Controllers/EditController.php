@@ -6,8 +6,12 @@ use Illuminate\Http\Request;
 
 class EditController extends Controller
 {
-    public function index($id)
-    {
-        return view('Edit');
-    }
+    public function index(Request $request , $id ,$dark = false)
+{
+    return view('Edit')
+    ->with([ 
+        'id' => $id,
+        'dark' => $dark,
+    ]);
+}
 }

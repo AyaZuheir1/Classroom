@@ -17,4 +17,8 @@ use App\Http\Controllers\EditController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/edit/{id}', [EditController::class, 'index'])->name('edit.index');
+
+// Route::get('/classrooms', [classroomsController::class, 'index'])->name('classrooms.index');
+// Route::get('/classrooms/create', [classroomsController::class, 'create'])->name('classrooms.create');
+// Route::get('/classrooms/{classroom}/{edit?}', [classroomsController::class, 'show']);
+Route::get('/edit/{id?}', [EditController::class, 'index'])->name('edit.index');
