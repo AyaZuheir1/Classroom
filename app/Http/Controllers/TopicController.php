@@ -14,7 +14,7 @@ class TopicController extends Controller
     public function index(Request $request): Renderable
     {
 
-        $topics = Topic::orderBy('Created_at', 'DESC')->get(); // return collection of topic
+        $topics = Topic::orderBy('Created_at', 'AYA')->get(); 
 
         $success = session('success');
 

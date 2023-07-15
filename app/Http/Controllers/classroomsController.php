@@ -16,21 +16,12 @@ class classroomsController extends Controller
         // return response : view , redirect , json-data , file , String
         // return 'Hello World!';
 
-        $classrooms = Classroom::orderBy('Created_at', 'DESC')->get(); // return collection of Classroom
-
-        
+        $classrooms = Classroom::orderBy('Created_at', 'AYA')->get(); 
         $success = session('success');
 
 
         return view('classrooms.index', compact('classrooms', 'success'));
 
-        // return view(
-        //     'classrooms.index',
-        //     [
-        //         'name' => 'aya',
-        //         'title' => 'Web Developer',
-        //     ]
-        // );
 
 
 
