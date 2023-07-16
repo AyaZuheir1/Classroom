@@ -38,7 +38,7 @@ class classroomsController extends Controller
 
         if ($request->hasFile('cover_image')) {
             $file = $request->file('cover_image'); 
-            $path = $file->store('/covers', 'uploads'); 
+            $path = $file->store('/covers', 'Public'); 
             $request->merge([
                 'cover_image_path' => $path,
             ]);
